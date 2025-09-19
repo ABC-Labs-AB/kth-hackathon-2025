@@ -29,12 +29,14 @@ This file contains detailed information about each sample and its context.
 
 | Variable Name | Description | Notes |
 |--------------------|------------------------------------------------|-------------------------------------------------|
-| `sample_file_name` | Mapping to the individual sample file | Data in GCP is in Parquet format; more details below |
+| `sample_file_name` | Mapping to the individual sample file | more details below |
 | `test_type` | Type of run in a batch | Possible values: Analyte,Standard, QC, Blank |
 | `positive_compounds`| List of all positive analytes detected in a sample | More details in [**Case & Background**](<Case & Background.md>). **Only present in training set**|
-| `interpreted_call` | Positive/Negative label for the sample | "POS" means positive; "NEG" means negative. **Only present in training set** |
 | `Method` | Indication of the testing method | Different methods test for different analytes; there are 3 methods used in our lab |
 | `Instrument` | One of the 4 LC-MS/MS instruments used in the lab | |
+| `interpreted_call` | Positive/Negative label for the sample | "POS" means positive; "NEG" means negative. **Only present in training set** |
+
+---
 
 #### 🔍 sample_file_name Breakdown
 
