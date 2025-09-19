@@ -1,4 +1,4 @@
-# 🔍 Case & Background  
+# 📖 Case & Background  
 
 The methods developed in our laboratory are tailored for **workplace drug testing**, with three distinct analytical approaches designed to address different business needs: **U-DoA, Q-DoA, and OF-DoA**. The purpose of these tests is to determine whether a donor’s biological sample contains one or more prohibited substances that could impair performance or pose safety risks in the workplace. Each sample is screened for multiple analytes simultaneously.  
 
@@ -12,7 +12,7 @@ A **negative result** means that none of the target analytes are detected above 
 
 This manual evaluation is time-intensive, as the technician must carefully interpret the LC-MS/MS output to confirm whether any analytes exceed the required thresholds. The objective of this project is to **develop a predictive model that can automate this interpretation**, increasing efficiency while maintaining accuracy.  
 
-To fully understand the work done by the technician when evaluating results, it is essential to first explain how LC-MS/MS operates. This technical background will also serve as the foundation for selecting suitable **data preprocessing methods** for the predictive model.  
+To fully understand the work done by the technician when evaluating results, it is essential to first explain how LC-MS/MS operates. This technical background will also serve as the foundation for selecting suitable **data preprocessing methods** for the predictive model.
 
 # 🔬 LC-MS/MS  
 
@@ -80,19 +80,40 @@ Think of it as having almost no chance of measuring intensity from another analy
 
 </div>
 
-### Chromatogram and Relative Abundance  
+#### Chromatogram and Relative Abundance  
 
 A chromatogram displays the **relative abundance** of ions over time. For each ion (fragment), a separate intensity graph is generated. The Y-axis of each graph shows the signal intensity normalized individually to that ion’s most intense peak, which is scaled to 100%.  
 
 This per-ion normalization allows clear visualization of all fragments, especially since many compounds produce one dominant fragment ion (often near 90% relative abundance) alongside several lesser-abundant fragments that might otherwise be difficult to detect.  
 
 > **Note:** This type of graph is called a **Chromatogram** because the time component arises from the prior chromatographic separation.  
-> Instead of visual detection (such as the color-based detection in Figure 1), here we use mass spectrometry to identify compounds based on their mass-to-charge ratio.
+> Instead of visual detection (such as the color-based detection in Figure 1.), here we use mass spectrometry to identify compounds based on their mass-to-charge ratio.
+
+__
+
+## 2. Chemical Compounds and Samples
+
+This is how each instrument works individually, and now we will explain in more detail how the method is set up for our case when the problem involves identifying 40 compounds.
+
+Full LC-MS/MS requires additional chemical components beyond the donor sample:
+
+- **IS - Internal Standard**  
+  The **internal standard** is an **isotope-labeled version** of the analyte of interest. It has the same chemical properties but a **slightly higher molecular weight** due to the replacement of some atoms with heavier isotopes—for example, hydrogen (¹H) replaced by **deuterium (²H)**.  
+  Most IS compounds are **D5-labeled**, meaning five hydrogen atoms have been replaced with deuterium. Since the IS shares chemical properties with the analyte, it elutes at the same time, but the mass spectrometer distinguishes them based on their **molecular weight differences**. Internal standards are **not naturally present** in biological samples and are manufactured as **pure, stable compounds in certified laboratories**, ensuring they do not overlap with analytes of interest.
 
 
+- **Calibrator (External Standard)**  
+  A **certified standard** of the analyte, provided as a powder or solution, used for quantification by creating calibration curves. It is **chemically identical** to the analyte of interest to ensure accurate and reliable measurement.
 
 
+- **Blank Matrix**  
+  A **blank matrix** is a biological material (such as blood, plasma, serum, urine, etc.) that is **the same type of biological matrix as the patient samples**, but is confirmed to be free of the analytes of interest.
 
+### Sample Types Used in LC-MS/MS Runs
 
-
-
+| Sample Type             | Composition                                                                                                      | Purpose                                   |
+|------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------|
+| Patient Sample          | Patient sample + IS standards of each analyte                                                                   | Actual patient testing                     |
+| Blank Sample            | Blank matrix                                                                                                    | Negative control                          |
+| Calibration Sample      | Blank matrix + IS standards + fixed concentrations of calibrator (usually multiple levels)                       | Generate calibration curves                |
+| Quality Control (QC) Sample | Blank matrix + IS standards + fixed calibrator concentrations (low, medium, and high levels)                | Ensure assay precision and accuracy        |
