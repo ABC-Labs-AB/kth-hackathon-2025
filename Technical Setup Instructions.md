@@ -47,7 +47,7 @@ Welcome to the Hackathon! This guide contains everything you need to get started
 
 ### What You'll Get
 - **GCP Project**: `kth-team-XX` (where XX is your team number)
-- **Budget**: $200 USD for the duration of the hackathon
+- **Budget**: 2000 SEK for the duration of the hackathon
 - **Vertex AI Workbench**: Pre-configured Jupyter notebook environment
 - **Cloud Storage Bucket**: For your data and results
 - **Pre-loaded Data**: Hackathon dataset in your bucket
@@ -133,7 +133,7 @@ You have access to (but not obliged to) use:
 ## 📊 Managing Your Budget
 
 ### Budget Limit
-- Each team has a **$200 USD budget**
+- Each team has a **2000 SEK budget**
 - The project will stop accepting new resources once the budget is reached
 
 ### Cost-Saving Tips
