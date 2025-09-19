@@ -4,7 +4,6 @@ To help you get started, we have prepared several **documents and
 resources** that will guide you throughout the event.
 
 These include:
-- [📅 **Event Schedule**](<Event Schedule.md>) - overview of all key sessions, deadlines, and important information.
 - [⚙️ **Technical Setup Instructions**](<Technical Setup Instructions.md>) - step-by-step guide to get your
 your team's Google Cloud Platform (GCP) environment ready.
 - [🔍 **Case & Background**](<Case & Background.md>) - detailed information on the
@@ -18,7 +17,7 @@ structure, features, and how to interpret it.
 Please review these resources carefully—they’re here to make your
 hackathon experience as smooth and successful as possible!
 
-# Timeline
+# 📅 Event Schedule
 
 | Activity | Date | Notes/Location |
 |----------|------|----------------|
