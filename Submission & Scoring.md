@@ -54,7 +54,7 @@ We understand that hackathons are about **exploration and learning**. Teams are 
 
 3. **Jupyter Notebooks** — Include all your analysis, modeling, and experimentation notebooks.
 
-4. **Project Report** — You must provide a `README.md` with your submission. The required structure and backbone for this README can be found in the [Project Report Format Guide](Project_Report_Format_Guide.md).
+4. **Project Report** — You must provide a `README.md` with your submission. The required structure and backbone for this README can be found in the [Project Report Format Guide](<Project Report Format Guide.md>).
 
 ### Submission Format
 Upload all your final deliverables to your assigned **GCP Storage bucket** by creating a new `final-submission/` folder.
