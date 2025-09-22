@@ -192,5 +192,48 @@ To address this, an **internal standard (IS)** is included in every sample. The 
 
 The IS thus serves as a critical quality control marker, ensuring confidence in both positive and negative results.
 
+## 5. Understanding the Chromatogram Outputs
+
+Now that most sections of the LC-MS/MS workflow in drug testing have been explained, it is useful to compare chromatograms for a **positive** and a **negative** sample. The analyte in question is **THC-COOH**.
+
+<div align="center">
+  <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; flex-wrap: wrap;"> 
+    <div style="text-align: center;">
+      <img src="images/positive_chromatogram.png" alt="Chromatogram" width="400">
+      <p><strong>Figure 2a.</strong> Positive sample.</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="images/negative_chromatogram.png" alt="Mass Spectrum" width="400">
+      <p><strong>Figure 2b.</strong> Negative sample.</p>
+    </div>
+  </div>
+</div>
+
+In a chromatogram, there are typically **three plots**. The first two correspond to the measurements of fragment ions from the analyte of interest—in this example, **THC-COOH**. The third plot corresponds to the **internal standard (IS)** associated with that analyte, here **THC-COOH-D3**.  
+
+You can observe that the transitions for the first two plots share the same parent fragment ion (343.3), while the IS, being a heavier isotope with three deuterium atoms, has a parent fragment ion at 346.3.  
+
+The first two plots show intensity data for the analyte fragment ions called **Quantifier** and **Qualifier**. The IS fragment ion is simply called **IS**. Only one ion is monitored for the IS because it is not naturally occurring and thus requires less specificity.  
+
+In the `key-transitions.csv` file, the **Analyte** is equivalent to the **Processing Group** for the Quantifier and Qualifier (Processing group: THC-COOH, Analyte: THC-COOH), while for the IS fragment it is (Processing group: THC-COOH, Analyte: THC-COOH-D3).
+
+The reason for having both a Quantifier and Qualifier is that the Quantifier ion is used for concentration quantification, similar to how concentration is back-calculated in QC samples, while the Qualifier ion is used to confirm the presence of the analyte. Since concentration calculation is out of the scope of this hackathon, it is sufficient to understand that the Quantifier and Qualifier are fragments of the drug being tested, and IS refers to the internal standard ion.
+
+### Positive vs Negative Chromatograms
+
+A **positive sample** will have a peak for Qualifier and Quantifier at the same retention time as the internal standard (IS). It is important to note that if there is no peak for the IS, this indicates that the run may be faulty or invalid.
+
+**Negative samples** - Qualifier and Quantifier show some baseline noise but do not have distinguishable peaks. This absence of peaks confirms the lack of the analyte in the sample.
+
+This distinction helps verify the presence or absence of the target compound during LC-MS/MS analysis.
+
+
+
+
+
+
+
+
+
 
 
