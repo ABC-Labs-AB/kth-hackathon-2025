@@ -11,7 +11,7 @@ We'll evaluate your model using **standard classification metrics**:
 - **Recall (Sensitivity)** - Ability to catch all positive cases
 - **F1-Score** - Balanced measure of precision and recall
 
-*Note: Different metrics may be weighted based on business context and the specific problem you're solving. Consider which metrics are most important for your use case.*
+*Note: Different metrics may be weighted based on business context and the specific problem you're solving. Consider which metrics are most important this case.*
 
 ### 🧠 Problem-Solving Approach (60%)
 This is the **largest component** and focuses on your methodology and reasoning:
@@ -19,12 +19,16 @@ This is the **largest component** and focuses on your methodology and reasoning:
 - **Data Analysis & Feature Engineering** (20%) - Quality of data exploration and feature selection
 - **Model Selection & Methodology** (20%) - Appropriateness of chosen techniques and experimental design
 
+*Note: Your submission will be evaluated based on your **Project report**, as detailed in the [Required Deliverables](#required-deliverables).*
+
 ### 🎤 Presentation (20%)
 Your ability to communicate your solution effectively:
 - **Clarity & Structure** - Well-organized, easy-to-follow presentation
 - **Technical Communication** - Ability to explain complex concepts clearly
 - **Business Impact** - Connection between technical solution and business value
 - **Team Collaboration** - Evidence of effective teamwork
+
+*Note: Your presentation submission will be evaluated with the only requirement that it stays under 10 minutes. The presentation format is flexible and free, allowing you to choose any style or media that best showcases your project.*
 
 ## 💡 Flexible Approach Philosophy
 
@@ -50,7 +54,7 @@ We understand that hackathons are about **exploration and learning**. Teams are 
 
 3. **Jupyter Notebooks** — Include all your analysis, modeling, and experimentation notebooks.
 
-4. **Documentation** — You must provide a `README.md` with your submission. The required structure and backbone for this README can be found in the [README Format Guide](README_Format_Guide.md).
+4. **Project Report** — You must provide a `README.md` with your submission. The required structure and backbone for this README can be found in the [Project Report Format Guide](Project_Report_Format_Guide.md).
 
 ### Submission Format
 Upload all your final deliverables to your assigned **GCP Storage bucket** by creating a new `final-submission/` folder.

@@ -8,7 +8,7 @@ In brief, the dataset contains three different types of files: **Metadata**, **K
 
 All sample files are available in your assigned GCP bucket. The metadata has been split into training and test sets:
 
-- **`metadata-train.csv`** - Contains 80% of the samples with labels (`interpreted_call`) for model training
+- **`metadata-train.csv`** - Contains 80% of the samples with labels (`interpreted_call`, `positive_compounds`) for model training
 - **`metadata-test.csv`** - Contains 20% of the samples **without labels** - this is your test dataset for final predictions
 - **`key-transitions.csv`** - Complete analyte-transition mappings for all methods
 - **Sample files** - Individual measurement files for all samples (both train and test)
@@ -34,7 +34,9 @@ This file contains detailed information about each sample and its context.
 | `positive_compounds`| List of all positive analytes detected in a sample | More details in [**Case & Background**](<Case & Background.md>). **Only present in training set**|
 | `Method` | Indication of the testing method | Different methods test for different analytes; there are 3 methods used in our lab |
 | `Instrument` | One of the 4 LC-MS/MS instruments used in the lab | |
-| `interpreted_call` | Positive/Negative label for the sample | "POS" means positive; "NEG" means negative. **Only present in training set** |
+| `interpreted_call` | Positive/Negative label for the sample | "POS" means positive; "NEG" means negative. Sample is positive if there is at least one entry in the positive_compounds variable. **Only present in training set** |
+
+> **Note:** In the test_type, Analyte corresponds to the Patient Sample and Standard corresponds to the Calibration Sample.
 
 ---
 
